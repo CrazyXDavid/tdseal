@@ -1,8 +1,77 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>TDSEAL 资料库</title>
+    <title>TDSEAL资料库</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .card-img-top {
+            transform: scale(3);
+        }
+        
+        body {
+            background-color: #dddddd;
+        }
+        
+        .bg-secondary {
+            transition-property: background-color, color;
+            transition-duration: 0.2s;
+        }
+        
+        .bg-secondary:hover {
+            background-color: rgba(108, 117, 125, 0.5) !important;
+            color: #000000;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $(".row").children().children().mouseover(function() {
+                $(this).addClass("shadow");
+            });
+            $(".row").children().children().mouseleave(function() {
+                $(this).removeClass("shadow");
+            });
+        })
+    </script>
 </head>
+
 <body>
+
+    <div class="text-center bg-secondary shadow-lg p-3">
+        <h1 class="display-2">TDSEAL资料库</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+        </div>
+    </div>
+
 </body>
+
 </html>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "items.json",
+            dataType: "json",
+            context: document.body,
+            success: function(r) {
+                r.forEach(el => {
+                    $(".row").append("<div class=\"col-6 mb-4\"><div class=\"card rounded-pill\">" +
+                        "<div class=\"card-body text-center display-4 p-5\">" +
+                        "<div style=\"border: 0; background-image: url(" + el.img + "); width: 32px; height: 32px; background-position: " + el.pos.x + " " + el.pos.y + "\"class = \"mx-auto text-center card-img-top mb-3\"></div>" +
+                        "<div>" + el.name + "</div>" + "<div>[" + el.cost + "]</div></div></div></div>");
+
+                });
+
+            }
+        })
+
+
+    })
+</script>
