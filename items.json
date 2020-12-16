@@ -1,0 +1,23 @@
+[{
+        "name": "太陽能板",
+        "img": "https://seal.dvg.cn/tw/img/itemicon1.png",
+        "pos": { "x": "-288px", "y": "-32px" },
+        "cost": 100
+    },
+    {
+        "name": "雪姬公主的水晶",
+        "img": "https://seal.dvg.cn/tw/img/itemicon2.png",
+        "pos": { "x": "-481px", "y": "-480px" },
+        "cost": 500
+    }, {
+        "name": "蛇妖的鱗片",
+        "img": "https://seal.dvg.cn/tw/img/itemicon5.png",
+        "pos": { "x": "-64px", "y": "-288px" },
+        "cost": 50
+    }, {
+        "name": "滑順的頭髮",
+        "img": "https://seal.dvg.cn/tw/img/itemicon5.png",
+        "pos": { "x": "-192px", "y": "-256px" },
+        "cost": 50
+    }
+]
