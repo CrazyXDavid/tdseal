@@ -27,6 +27,12 @@
             background-color: rgba(108, 117, 125, 0.5) !important;
             color: #000000;
         }
+        
+        .banner {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
     </style>
     <script>
         $(document).ready(function() {
@@ -41,7 +47,9 @@
 </head>
 
 <body>
-
+    <div class="banner">
+        <a href="./acc.html">View my accounts</a>
+    </div>
     <div class="text-center bg-secondary shadow-lg p-3">
         <h1 class="display-2">TDSEAL资料库</h1>
     </div>
@@ -57,7 +65,7 @@
 <script>
     $(document).ready(function() {
         $.ajax({
-            url: "./items.json",
+            url: "items.json",
             dataType: "json",
             context: document.body,
             success: function(r) {
