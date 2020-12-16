@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TDSEAL资料库</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .checked {
+            background-color: #55efc4;
+        }
+        
+        input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table text-center border rounded-pill display-4">
+            <thead class="bg-light">
+                <tr>
+                    <th>Username</th>
+                    <th>Nickname</th>
+                    <th>Objective</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>crazyxdavid02</td>
+                    <td>XCXC</td>
+                    <td>高標<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid03</td>
+                    <td>ZZZZ</td>
+                    <td>大紅藥水<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid04</td>
+                    <td>ZXZX</td>
+                    <td>大紅藥水<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid05</td>
+                    <td>QWQW</td>
+                    <td>大藍藥水<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid06</td>
+                    <td>WEWE</td>
+                    <td>紅寶石65W<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid07</td>
+                    <td>SDSD</td>
+                    <td>車子88W<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid08</td>
+                    <td>ERER</td>
+                    <td>高標<input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>crazyxdavid09</td>
+                    <td>DFDF</td>
+                    <td>車子88W<input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    $("tbody tr").click(function() {
+
+        const checkbox = $(this).children().children();
+        if (checkbox.attr("checked") == "checked") {
+            checkbox.removeAttr("checked");
+            $(this).removeClass("checked");
+        } else {
+            $(this).addClass("checked");
+            checkbox.attr('checked', 'checked')
+        }
+    }).hover(function() {
+        $(this).addClass("shadow");
+    }).mouseleave(function() {
+        $(this).removeClass("shadow")
+    })
+</script>
